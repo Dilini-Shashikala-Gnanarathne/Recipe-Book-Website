@@ -42,25 +42,51 @@ function showInfo() {
     document.querySelectorAll('.employeeDetails').forEach(info => info.remove());
     getData.forEach((element, index) => {
         const createElement = `<tr class="employeeDetails">
-        <td>${index + 1}</td>
-        <tr class="employeeDetails"><td style="background-color: white; color: black; border: none;"><h1>${element.employeeName}</h1></td></tr>
-        <tr class="employeeDetails"><td><h1>${element.employeeIngredeants}</h1></td></tr>
-        <tr class="employeeDetails"><td><h1>${element.employeeRecipe}</h1></td></tr>
-        <tr class="employeeDetails"><td><img src="${element.picture}" alt="" ></td></tr> 
-        <tr class="employeeDetails"> <td>
-            <button class="btn btn-success" onclick="readInfo('${element.employeeName}', '${element.employeeIngredeants}','${element.employeeRecipe}','${element.picture}')" data-bs-toggle="modal" data-bs-target="#readData"><i class="bi bi-eye"></i></button>
-            <button class="btn btn-primary" onclick="editInfo(${index}, '${element.employeeName}', '${element.employeeIngredeants}','${element.employeeRecipe}','${element.picture}')" data-bs-toggle="modal" data-bs-target="#userForm"><i class="bi bi-pencil-square"></i></button>
-            <button class="btn btn-danger" onclick="deleteInfo(${index})"><i class="bi bi-trash"></i></button>
-        </td>
-    </tr >
-    <tr class="employeeDetails">
-    <td></td></tr>
-    <tr class="employeeDetails">
-    <td></td></tr></tr>`;
-    
+            <td>${index + 1}</td>
+            <tr class="employeeDetails">
+                <td style="background-color: white; color: black; border: none;">
+                    <h1 style="font-size: 50px; font-weight: bold;">${element.employeeName}</h1>
+                </td>
+            </tr>
+            <tr class="employeeDetails">
+                <td >
+                <h1 style="font-size: 20px;">${element.employeeIngredeants}</h1>                </td>
+            </tr>
+            <tr class="employeeDetails">
+                <td>
+                    <h1 style="font-size: 14px;">>${element.employeeRecipe}</h1>
+                </td>
+            </tr>
+            <tr class="employeeDetails">
+                <td>
+                    <img src="${element.picture}" alt="" style="max-width: 100%; height: auto;">
+                </td>
+            </tr> 
+            <tr class="employeeDetails">
+                <td>
+                    <button class="btn btn-success" onclick="readInfo('${element.employeeName}', '${element.employeeIngredeants}','${element.employeeRecipe}','${element.picture}')" data-bs-toggle="modal" data-bs-target="#readData">
+                        <i class="bi bi-eye"></i>
+                    </button>
+                    <button class="btn btn-primary" onclick="editInfo(${index}, '${element.employeeName}', '${element.employeeIngredeants}','${element.employeeRecipe}','${element.picture}')" data-bs-toggle="modal" data-bs-target="#userForm">
+                        <i class="bi bi-pencil-square"></i>
+                    </button>
+                    <button class="btn btn-danger" onclick="deleteInfo(${index})">
+                        <i class="bi bi-trash"></i>
+                    </button>
+                </td>
+            </tr >
+            <tr class="employeeDetails">
+                <td></td>
+            </tr>
+            <tr class="employeeDetails">
+                <td></td>
+            </tr>
+        </tr>`;
+
         userInfo.innerHTML += createElement;
     });
 }
+
 
 
 function readInfo(pic, name, ingredeance, recipe) {
