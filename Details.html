@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Online Shopping</title>
+	<link rel="stylesheet" href="Details.css">
+</head>
+<body>
+<div class="header">
+<div class="container_">
+	<div class="navbar">
+		<div class="logo">
+			<i><b>S</b></i>world
+		</div>
+		<nav >
+			<div class="nav-links" id="navLinks">
+			<ul id="menuitems"><b>
+			    	<li><a href="Home.html">HOME</a></li>
+					<li><a href="Catagories.html">PRODUCTS</a></li>
+					<li class="active"><a href="Details.html">DETAILS</a></li>
+					<li><a href="Account.html">CONTACT</a></li>
+					<li><a href="About.html">ABOUT</a></li>	</b>
+					
+			</ul>
+		    </div>
+		</nav>	
+    </div></div>
+
+<!-----------------single product------------->	
+<div class="small-container Single-product">
+	<div class="row">
+		<div class="col-2">
+			<img src="Pictures/Home.jpg" id="ProductImg" class="big-img">
+			<div class="Small_img_row">
+				<div class="Small_img_col" >
+				<img src="Pictures/D1.png" class="small-img" >
+				</div>
+				<div class="Small_img_col">
+				<img src="Pictures/D2.png" class="small-img" >
+				</div>
+				<div class="Small_img_col">
+				<img src="Pictures/D3.png" class="small-img" >
+				</div>
+				<div class="Small_img_col">
+				<img src="Pictures/D4.png" class="small-img" >
+				</div>
+			</div>
+		</div>
+		<div class="col-2">
+			<p>Yummy/Testy</p>
+			<h1>Honey BBQ Chicken Wings</h1>
+			<select class="Option">
+				<option><h2>Ingredients for 20 wings</h2></option>
+				<option>1 cup flour(125 g)</option>
+				<option>1 teaspoon chili powder</option>
+				<option>1 teaspoon black pepper, freshly ground</option>
+				<option>1 teaspoon paprika</option>
+				<option>1 teaspoon garlic powder</option>
+				<option>20 chicken wings, or drumette</option>
+				<option>1 cup BBQ sauce(290 g)</option>
+			</select>
+				<a href="Account.html" class="button">Play the video</a>
+				<h3>Recipe Details</h3><br>
+				<p> 1.Preheat oven to 425°F (220°C).<br>
+					2.Mix flour, chili powder, salt, pepper, paprika, and garlic powder in a bowl.<br>
+					3.Coat wings evenly in the flour mixture, shaking off excess.<br>
+					4.Place wings on parchment paper–lined baking sheet in a single layer.<br>
+					5.Bake for 45 minutes, flipping halfway, until crispy and golden.<br>
+					6.Preheat oven to 500°F (250°C).<br>
+					7.Combine BBQ sauce and honey in a bowl.<br>
+					8.Toss cooked wings in the sauce to coat evenly.<br>
+					9.Place coated wings back on the baking sheet in a single layer.<br>
+					10.Bake for 8 to 10 minutes until sauce is bubbly and caramelized.<br>
+					11.Cool and serve. Enjoy!<br>
+				</p>
+		</div>
+	</div>
+</div>
+
+<!-------foooter------><div class="footer">
+	<div class="container">
+		<div class="row">
+			<div class="footer-col-1">
+				<h3>Download Our App</h3>
+				<p>Download app for Android mobile phone</p>
+				<div class="app-logo">
+					<img src="Pictures/G1.jpg">
+				</div>
+			</div>
+			<div class="footer-col-2">
+				<br><br><br>
+				<p>Download app for Apple mobile phone</p>
+				<div class="app-logo">
+				<img src="Pictures/G2.png">
+				</div>
+			</div>
+			<div class="footer-col-3">
+			    <h3>Useful Links</h3>
+				<ul>
+					<li>Facebook</li>
+					<li>Twitter</li>
+					<li>Return Policy</li>
+					<li>Join Affiliate</li>
+				</ul>
+			</div>	
+			<div class="footer-col-3">
+				<h3>Follow Us</h3>
+				<ul>
+					<li>Facebook</li>
+					<li>Twitter</li>
+					<li>Instregram</li>
+					<li>Youtube</li>
+				</ul>
+			</div>	
+		</div>			
+	</div> 
+	<hr></div>
+<!---------js single-->
+<script>
+	var ProductImg= document.getElementById("ProductImg");
+	var SmallImg= document.getElementsByClassName("small-img");
+	SmallImg[0].onclick=function(){
+		ProductImg.src=SmallImg[0].src;
+	}
+	SmallImg[2].onclick=function(){
+		ProductImg.src=SmallImg[2].src;
+	}
+	SmallImg[1].onclick=function(){
+		ProductImg.src=SmallImg[1].src;
+	}
+	SmallImg[3].onclick=function(){
+		ProductImg.src=SmallImg[3].src;
+	}
+</script>
+			
+</body>
+</html>
