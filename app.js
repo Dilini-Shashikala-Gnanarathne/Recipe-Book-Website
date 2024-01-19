@@ -17,7 +17,7 @@ showInfo();
 
 newUserBtn.addEventListener('click', () => {
     submitBtn.innerText = 'Submit';
-    modalTitle.innerText = "Fill the Form";
+    modalTitle.innerText = "Add your recipe";
     isEdit = false;
     imgInput.src = "./image/Profile Icon.webp";
     form.reset();
@@ -49,24 +49,25 @@ function showInfo() {
                 </td>
             </tr>
             <tr class="employeeDetails">
+            <td>
+                <img src="${element.picture}" alt="" style="max-width: 100%; height: auto;">
+            </td>
+        </tr> 
+            <tr class="employeeDetails">
                 <td >
-                <h1 style="font-size: 20px;">${element.employeeIngredeants}</h1>                </td>
-            </tr>
-            <tr class="employeeDetails">
-                <td>
-                    <h1 style="font-size: 14px;">>${element.employeeRecipe}</h1>
+                <h1 style="font-size: 20px;  font-weight: bold;">Ingredeance:</h1>   
+                <h1 style="font-size: 20px;">${element.employeeIngredeants}</h1>                
                 </td>
             </tr>
             <tr class="employeeDetails">
-                <td>
-                    <img src="${element.picture}" alt="" style="max-width: 100%; height: auto;">
+                <td>  <h1 style="font-size: 20px;  font-weight: bold;">Recipe Details</h1>
+                    <h1 style="font-size: 14px;">${element.employeeRecipe}</h1>
                 </td>
-            </tr> 
+            </tr>
+       
             <tr class="employeeDetails">
                 <td>
-                    <button class="btn btn-success" onclick="readInfo('${element.employeeName}', '${element.employeeIngredeants}','${element.employeeRecipe}','${element.picture}')" data-bs-toggle="modal" data-bs-target="#readData">
-                        <i class="bi bi-eye"></i>
-                    </button>
+                   
                     <button class="btn btn-primary" onclick="editInfo(${index}, '${element.employeeName}', '${element.employeeIngredeants}','${element.employeeRecipe}','${element.picture}')" data-bs-toggle="modal" data-bs-target="#userForm">
                         <i class="bi bi-pencil-square"></i>
                     </button>
@@ -89,12 +90,6 @@ function showInfo() {
 
 
 
-function readInfo(pic, name, ingredeance, recipe) {
-    document.querySelector('#showName').value = name;
-    document.querySelector('#showIngredeance').value = ingredeance;
-    document.querySelector('#showRecipeDetails').value = recipe;
-    document.querySelector('.showImg').src = pic;
-}
 
 function editInfo(index, names, ingredeanceValue, recipeValue, pic) {
     isEdit = true;
@@ -105,7 +100,7 @@ function editInfo(index, names, ingredeanceValue, recipeValue, pic) {
     imgInput.src = pic;
 
     submitBtn.innerText = "Update";
-    modalTitle.innerText = "Update The Form";
+    modalTitle.innerText = "Update The Recipe";
 }
 
 
@@ -139,7 +134,7 @@ form.addEventListener('submit', (e) => {
     localStorage.setItem('userProfile', JSON.stringify(getData));
 
     submitBtn.innerText = "Submit";
-    modalTitle.innerHTML = "Fill The Form";
+    modalTitle.innerHTML = "Add your recipe";
 
     showInfo();
 

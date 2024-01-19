@@ -1,94 +1,114 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>Online Shopping</title>
-	<link rel="stylesheet" href="Account.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Shopping</title>
+    <link rel="stylesheet" href="Account.css">
+    <link rel="stylesheet" href="Main.css">
 </head>
 <body>
-<!---catagories---->
-<div class="header">
-<div class="container_">
-	<div class="navbar">
-		<div class="logo">
-			<i><b>S</b></i>world
-		</div>
-		<nav ><div class="nav-links" id="navLinks">
-			<ul id="menuitems"><b>
-				<li><a href="Home.html">HOME</a></li>
-				<li><a href="Catagories.html">PRODUCTS</a></li>
-				<li ><a href="Details.html">DETAILS</a></li>
-				<li class="active"><a href="Account.html">ACCOUNT</a></li>
-				<li><a href="About.html">ABOUT</a></li>	</b>
-			</ul></div>
-		</nav>	
-    </div></div>
-<div class="Account-page">
-    <div class="container__"><center><h2>Logging Your Account</h2></center>
-	    <div class="row">
-		    <div class="col-2"><img src="Pictures\C1.jpg" width="100%"></div>
-                <div class="col-2">
-                    <div class="form_container">
-	   <div class="form-btn">
-		<span onclick="login()">Login</span>
-        <span onclick="register()">Register</span>
-		<hr id="Indicater">
-	   </div>
-    <form id="LoginForm">
-		<input type="text" placeholder="Username">
-		<input type="password" placeholder="Password">
-		<button type="submit" class="button">Login</button>
-		<a href="">Forgot Password</a>
-	</form>
 
-	<form id="RegForm">
-		<input type="text" placeholder="Username">
-		<input type="email" placeholder="Email">
-		<input type="password" placeholder="Password">
-		<button type="submit" class="button">Register</button>
-	</form>
-                    </div>	
+<!-- Navigation Bar -->
+<div class="header">
+    <div class="container_">
+        <div class="navbar">
+            <div class="logo">
+                <i><b>R</b></i>world
+            </div>
+          
+            <nav>
+                <div class="nav-links" id="navLinks">
+                    <ul id="menuitems">
+                        <b>
+                            <li><a href="Home.html">HOME</a></li>
+                            <li><a href="Categories.html">RECIPES</a></li>
+                            <li><a href="Details.html">DETAILS</a></li>
+                            <li class="active"><a href="Account.html">ACCOUNT</a></li>
+                            <li><a href="About.html">ABOUT</a></li>
+                            <li><div id="welcomeMessage" class="welcome-message"></div></li> <!-- New element for welcome message -->
+                        </b>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+</div>
+
+<!-- Account Page -->
+<div class="Account-page">
+    <div class="container__">
+        <center><h2>Logging Your Account</h2></center>
+        <div class="row">
+            <div class="col-2">
+                <img src="Pictures\C1.jpg" width="100%">
+            </div>
+            <div class="col-2">
+                <div class="form_container">
+                    <div class="form-btn">
+                        <span onclick="login()">Login</span>
+                        <span onclick="register()">Register</span>
+                        <hr id="Indicater">
+                    </div>
+                    <form id="LoginForm">
+                        <input type="text" placeholder="Username">
+                        <input type="password" placeholder="Password">
+                        <button type="submit" class="button">Login</button>
+                        <a href="">Forgot Password</a>
+                    </form>
+                    <form id="RegForm">
+                        <input type="text" placeholder="Username" id="regUsername">
+                        <input type="email" placeholder="Email" id="regEmail">
+                        <input type="password" placeholder="Password" id="regPassword">
+                        <button type="button" class="button" onclick="registerUser()">Register</button>
+                    </form>
+                    <!-- Display user info after registration -->
+                    <div id="userInfo"></div>
                 </div>
             </div>
         </div>
     </div>
-</div><br><br><br><br>
+</div>
 
-<div class="brand"><center><h1> PAYMENT</h1></center>
-	<div class="small-container">
-		<div class="row">
-			<div class="col-5">
-				<img src="Pictures/1.PNG">
-			</div>
-			<div class="col-5">
-				<img src="Pictures/2.PNG">
-			</div>
-			<div class="col-5">
-				<img src="Pictures/3.PNG">
-			</div>
-			<div class="col-5">
-				<img src="Pictures/4.PNG">
-			</div>
-			<div class="col-5">
-				<img src="Pictures/5.PNG">
-			</div>
-	</div>
-</div></div>
-<!-------foooter------>
-<div class="footer">
+<!-- Payment -->
+<div class="brand">
+    <center><h1>PAYMENT</h1></center>
+    <div class="small-container">
+        <div class="row">
+            <div class="col-5">
+                <img src="Pictures/1.PNG">
+            </div>
+            <div class="col-5">
+                <img src="Pictures/2.PNG">
+            </div>
+            <div class="col-5">
+                <img src="Pictures/3.PNG">
+            </div>
+            <div class="col-5">
+                <img src="Pictures/4.PNG">
+            </div>
+            <div class="col-5">
+                <img src="Pictures/5.PNG">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-------foooter------><div class="footer">
 	<div class="container">
 		<div class="row">
 			<div class="footer-col-1">
 				<h3>Download Our App</h3>
 				<p>Download app for Android mobile phone</p>
 				<div class="app-logo">
-					<img src="Pictures/G1.jpg">
+					<i class='fab fa-google-play' style='font-size:24px'></i>					<i class="fa-brands fa-google-play"></i>
 				</div>
 			</div>
 			<div class="footer-col-2">
 				<br><br><br>
 				<p>Download app for Apple mobile phone</p>
 				<div class="app-logo">
-				<img src="Pictures/G2.png">
+					<i class="fa fa-apple" aria-hidden="true"></i><i class="fa-brands fa-google-play" aria-hidden="true"></i>
 				</div>
 			</div>
 			<div class="footer-col-3">
@@ -111,26 +131,43 @@
 			</div>	
 		</div>			
 	</div> 
-	<hr>
-</div></div></div></div>	 }	}
-</script>	
-<!-----js for toggle form-->
-<script>
-	var LoginForm = document.getElementById("LoginForm");
-	var RegForm = document.getElementById("RegForm");
-	var Indicater= document.getElementById("Indicater");
+	<hr></div>
 
-	function register(){
-		RegForm.style.transform= "translateX(0px)";
-		LoginForm.style.transform="translateX(0px)";
-		Indicater.style.transform="translateX(100px)";
-	}
-	function login(){
-		RegForm.style.transform= "translateX(300px)";
-		LoginForm.style.transform="translateX(300px)";
-		Indicater.style.transform="translateX(0px)";
-	}
+<!-- Script for toggle form and display user info -->
+<script>
+    var LoginForm = document.getElementById("LoginForm");
+    var RegForm = document.getElementById("RegForm");
+    var Indicater = document.getElementById("Indicater");
+    var welcomeMessage = document.getElementById("welcomeMessage");
+
+    function register() {
+        RegForm.style.transform = "translateX(0px)";
+        LoginForm.style.transform = "translateX(0px)";
+        Indicater.style.transform = "translateX(100px)";
+    }
+
+    function login() {
+        RegForm.style.transform = "translateX(300px)";
+        LoginForm.style.transform = "translateX(300px)";
+        Indicater.style.transform = "translateX(0px)";
+    }
+
+    function registerUser() {
+        // Get values from the registration form
+        var regUsername = document.getElementById("regUsername").value;
+
+        // Display the user's name in the welcomeMessage div
+        welcomeMessage.innerHTML = regUsername;
+
+        // Clear the registration form fields
+        document.getElementById("regUsername").value = "";
+        document.getElementById("regEmail").value = "";
+        document.getElementById("regPassword").value = "";
+
+        // Prevent the form from submitting (to avoid page reload)
+        return false;
+    }
 </script>
-		
+
 </body>
 </html>
